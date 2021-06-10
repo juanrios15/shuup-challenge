@@ -19,6 +19,7 @@ $(document).ready(function () {
     });
     jQuery(document).on('mouseleave', '.companybox', function (data) {
         $(this).css("background-color", "white");
+        $(this).css("border", "0px ");
         $(this).find('.counting').each(function (indexInArray, valueOfElement) {
 
             if (parseInt($(this).text()) > 3) {
