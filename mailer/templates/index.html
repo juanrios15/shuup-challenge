@@ -22,7 +22,11 @@
     <div class="container col-md-6 px-0">
 
         <div class="container fixed-bottom ">
-
+            
+            {% comment %}
+            Start Pagination
+            {% endcomment %}
+                
             <nav aria-label="Page navigation" >
                 <ul class="pagination justify-content-center" style="padding: 10px;">
                     {% if page_obj.has_previous %}
@@ -54,7 +58,9 @@
                     {% endif %}
                 </ul>
             </nav>
-
+            {% comment %}
+            End Pagination
+            {% endcomment %}
         </div>
 
         <table class="table table-sm text-center table-borderless " width="1020" style="font-size: 0.8rem;">

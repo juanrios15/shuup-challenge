@@ -14,6 +14,8 @@ class IndexView(ListView):
     
     def get_queryset(self):
         
-        query = Company.objects.all().annotate(cont=Count('orders'),order_sum=Sum('orders__total')).prefetch_related('contacts','contacts__orders')
+        query = Company.objects.all(
+            ).annotate(cont=Count('orders'),order_sum=Sum('orders__total')
+            ).prefetch_related('contacts','contacts__orders')
         
         return query
